@@ -16,7 +16,7 @@ size_t gmax(size_t size)
 
 	while (gap < size)
 		gap = (gap * 3) + 1;
-	return ((gap / 3) - 1);
+	return ((gap - 1) / 3);
 }
 
 
