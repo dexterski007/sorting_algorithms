@@ -1,10 +1,12 @@
 #include "sort.h"
 
+size_t gmax(size_t size);
+
 /**
  * gmax - gap max
  *
  * @size: size
- * 
+ *
  * Return: max gap
  */
 
@@ -42,6 +44,7 @@ void shell_sort(int *array, size_t size)
 				array[b] = array[b - gap];
 			array[b] = tmp;
 		}
+		print_array(array, size);
 	}
 
 }
