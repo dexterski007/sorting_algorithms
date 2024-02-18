@@ -20,12 +20,10 @@ void merge_cmp(int *array, size_t beg, size_t end, int *dupl)
 	printf("[right]: ");
 	print_array(array + mi, end - mi);
 	for (o = beg; o < end; o++)
-	{
 		if (i < mi && (j >= end || array[i] <= array[j]))
 			dupl[o] = array[i++];
 		else
 			dupl[o] = array[j++];
-	}
 	printf("[Done]: ");
 	print_array(dupl + beg, end - beg);
 }
@@ -46,7 +44,7 @@ void merge_s(int *array, size_t beg, size_t end, int *dupl)
 	mi = (beg + end) / 2;
 	if (end - beg < 2)
 		return;
-	merge_s(dupl, 0, mi, array);
+	merge_s(dupl, beg, mi, array);
 	merge_s(dupl, mi, end, array);
 	merge_cmp(array, beg, end, dupl);
 }
