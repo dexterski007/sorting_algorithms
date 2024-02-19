@@ -54,7 +54,7 @@ void merge(int *array, size_t size, size_t begin, size_t block, char direc)
 		for (j = begin; j < begin + skip; j++)
 		{
 			if ((direc == UP && array[j] > array[j + skip]) ||
-				(direc == DOWN && array[j + skip]))
+				(direc == DOWN && array[j] < array[j + skip]))
 				vexel(array + j, array + j + skip);
 		}
 		merge(array, size, begin, skip, direc);
@@ -92,7 +92,6 @@ void sequence(int *array, size_t size, size_t begin, size_t block, char direc)
 		printf("Result [%lu/%lu] (%s):\n", block, size, str);
 		print_array(array + begin, block);
 	}
-
 }
 
 /**
