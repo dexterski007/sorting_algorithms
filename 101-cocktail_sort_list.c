@@ -69,7 +69,6 @@ void cocktail_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	
 	for (pointer = *list; pointer->next != NULL;)
 		pointer = pointer->next;
 
