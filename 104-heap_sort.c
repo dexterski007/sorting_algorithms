@@ -20,7 +20,7 @@ void vexel(int *array, size_t size, int *pos1, int *pos2)
 		temp = *pos1;
 		*pos1 = *pos2;
 		*pos2 = temp;
-		print_array((const int *)array, size);
+		print_array(array, size);
 	}
 }
 
@@ -83,7 +83,7 @@ void heap_sort(int *array, size_t size)
 {
 	size_t last;
 
-	if (array == NULL || size < 2)
+	if (!array || size < 2)
 		return;
 
 	toheap(array, size);
