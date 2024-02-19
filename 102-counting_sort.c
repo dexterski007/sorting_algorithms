@@ -44,10 +44,8 @@ void counting_sort(int *array, size_t size)
 		free(arrays);
 		return;
 	}
-
 	for (c = 0; c < (mx + 1); c++)
 		arrayc[c] = 0;
-
 	for (c = 0; c < (int)size; c++)
 		arrayc[array[c]] += 1;
 
