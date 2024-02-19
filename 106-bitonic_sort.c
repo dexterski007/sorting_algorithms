@@ -60,7 +60,7 @@ void merge(int *array, size_t size, size_t begin, size_t block, char direc)
 		merge(array, size, begin, skip, direc);
 		merge(array, size, begin + skip, skip, direc);
 	}
-	
+
 }
 
 /**
@@ -92,11 +92,11 @@ void sequence(int *array, size_t size, size_t begin, size_t block, char direc)
 		printf("Result [%lu/%lu] (%s):\n", block, size, str);
 		print_array(array + begin, block);
 	}
-	
+
 }
 
 /**
- * radix_sort - radix
+ * bitonic_sort - bitonic
  * @array: array
  * @size: size
  */
