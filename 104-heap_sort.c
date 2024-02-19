@@ -20,7 +20,7 @@ void vexel(int *array, size_t size, int *pos1, int *pos2)
 		temp = *pos1;
 		*pos1 = *pos2;
 		*pos2 = temp;
-		print_array(array, size);
+		print_array((const int *)array, size);
 	}
 }
 
