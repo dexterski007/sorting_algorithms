@@ -28,16 +28,16 @@ void vexel(int *array, size_t size, int *pos1, int *pos2)
  * sort_alg - sorting algorithm
  *
  * @array: array
+ * @beg: beginning
+ * @last: last
  * @size: size
- * @down: down posit
- * @up: up position
  */
 
 void sort_alg(int *array, size_t beg, size_t last, size_t size)
 {
 	size_t orig = beg, chng, inf;
 
-	while(leftc(orig) <= last)
+	while (leftc(orig) <= last)
 	{
 		inf = leftc(orig);
 		chng = orig;
@@ -88,7 +88,7 @@ void heap_sort(int *array, size_t size)
 
 	toheap(array, size);
 	last = size - 1;
-	while(last > 0)
+	while (last > 0)
 	{
 		vexel(array, size, &array[last], &array[0]);
 		last--;
